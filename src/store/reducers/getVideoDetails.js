@@ -6,7 +6,7 @@ import { timeSince } from "../../utils/timeSince";
 const API_KEY = process.env.REACT_APP_YOUTUBE_API;
 
 export const getVideoDetails = createAsyncThunk(
-    "youtube/App/videoDetails",
+    "youtubeApp/videoDetails",
     async(id) => {
         const {
             data:{items},

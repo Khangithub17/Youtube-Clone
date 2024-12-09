@@ -16,10 +16,6 @@ export default function Watch() {
 
   console.log(currentPlaying);
 
-  const recommendedVideo = useAppSelector(
-    (state) => state.youtubeApp.recommendedVideo
-  );
-
   useEffect(() => {
     if (id) {
       dispatch(getVideoDetails(id));
@@ -42,14 +38,14 @@ export default function Watch() {
           <div>
             <div>
               <div>
-                <div>
-                  <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1`}
-                  frameBorder="0"
-                  width="800"
-                  height="502"
-                  allowFullScreen
-                  title="Youtube Player">
-                  </iframe>
+                <div className="relative w-full pb-[56.25%]">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+                    frameBorder="0"
+                    className="absolute top-0 left-0 w-full h-full"
+                    allowFullScreen
+                    title="Youtube Player"
+                  ></iframe>
                 </div>
               </div>
             </div>

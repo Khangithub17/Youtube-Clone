@@ -5,7 +5,7 @@ import { parseData } from "../../utils/parseData";
 const API_KEY = process.env.REACT_APP_YOUTUBE_API;
 
 export const getSearchPageVideos = createAsyncThunk(
-    "youtube/App/homePageVideos",
+    "youtubeApp/searchPageVideos",
     async(isNext,{getState}) => {
         const {
             youtubeApp : {nextPageToken : nextPageTokenFromState,videos,searchTerm},

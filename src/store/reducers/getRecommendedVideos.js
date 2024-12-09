@@ -5,7 +5,7 @@ import { parseRecommendedData } from "../../utils/parseRecommendedData";
 const API_KEY = process.env.REACT_APP_YOUTUBE_API;
 
 export const getRecommendedVideos = createAsyncThunk(
-    "youtube/App/getRecommendedVideos",
+    "youtubeApp/getRecommendedVideos",
     async(videoId,{getState}) => {
         const {
             youtubeApp : {currentPlaying:{
